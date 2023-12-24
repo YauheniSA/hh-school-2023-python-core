@@ -42,9 +42,10 @@ class Market:
 
         return filter(
             self.get_filtering_func(from_date, to_date),
-            [drink for drink in (self.wines | self.beers).values() if (
-                drink.production_date
-            )
+            [
+                drink for drink in (self.wines | self.beers).values() if (
+                    drink.production_date
+                )
             ]
         )
 
